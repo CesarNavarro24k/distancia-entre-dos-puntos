@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np 
 while True:
     def distancia_dos(p1,p2):
@@ -13,5 +14,11 @@ while True:
     print("La distancia para los numeros que has ingresado es:")
     print(distancia_dos([x1,x2],[x3,x4]))
     question = input("Quieres salir del programa?")
+    figura = input("Quieres ver la grafica?")
+    if figura == "si":
+        plt.plot([x1,x3],[x2,x4])
+        plt.show()
+        plt.savefig("figuras/distancia.png")
+        plt.close()
     if question == "si":
         break
